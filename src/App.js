@@ -3,6 +3,7 @@ import TypeGrid from "./Components/TypeGrid.js";
 import { Side } from "./Components/sidebar.js";
 import Bar from "./Components/bar.js";
 import TypesData, { types } from "./Components/type.js";
+import anime from "animejs"
 
 let typesName = TypesData.map((i) => i.type);
 let filteredBtn = [];
@@ -23,6 +24,7 @@ function App() {
         theBtn.classList.remove('btnClick')
         btn.pop()
         filteredBtn = typesName;
+        animation(theBtn)
       }else {
         typesName = filteredBtn;
       }
@@ -55,6 +57,23 @@ function App() {
       <TypeGrid type={type} />
     </div>
   );
+}
+
+function animation(target) {
+  anime({
+    targets: target,
+    duration: 400,
+    keyframes: [
+      { translateX: 100 },
+      { translateX: -100 },
+      { translateX: 100 },
+      { translateX: -100 },
+      { translateX: 100 },
+      { translateX: -100 },
+      { translateX: 0 },
+    ],
+    easing: "linear",
+  });
 }
 
 export default App;
