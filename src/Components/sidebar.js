@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import  { Q } from "./type.js";
-import "../App.css"
+import "../index.css"
 
 const CF = ["Se-Ni", "Si-Ne", "Ti-Fe", "Te-Fi"];
 const IS = [
@@ -21,21 +21,24 @@ const Temps = [
 ];
 const Quadra = Object.keys(Q).map((a) => a);
 
-export function LeftSide(props) {
+
+export function Side(props) {
   const clickHandler = (event) => {
-    event.classList.toggle("btnClick");
-    props.addBtn(event.target.innerText);
-  };
+    
+    props.addBtn(event.target);
+  }
   return (
+    <>
     <div className="section1">
       <div className="CF-section">
         {CF.map((a, key) => (
-          <button onClick={clickHandler} className="btn" key={key}>
+          <button onClick={clickHandler}  
+          className="btn"
+          key={key}>
             {a}
           </button>
         ))}
       </div>
-
       <div className="Quadra-section">
         {Quadra.map((a, key) => (
           <button className="btn" onClick={clickHandler} key={key}>
@@ -44,31 +47,24 @@ export function LeftSide(props) {
         ))}
       </div>
     </div>
-  );
-}
 
-export function RightSide(props) {
-  const clickHandler = (event) => {
-    props.addBtn(event.target.innerText);
-  };
-
-  return (
     <div className="section2">
-      <div className="IS-section">
-        {IS.map((a, key) => (
-          <button onClick={clickHandler} key={key} className="btn">
-            {a}
-          </button>
-        ))}
-      </div>
-
-      <div className="Temp-section">
-        {Temps.map((a, key) => (
-          <button onClick={clickHandler} key={key} className="btn">
-            {a}
-          </button>
-        ))}
-      </div>
+    <div className="IS-section">
+      {IS.map((a, key) => (
+        <button onClick={clickHandler} key={key} className="btn">
+          {a}
+        </button>
+      ))}
     </div>
+
+    <div className="Temp-section">
+      {Temps.map((a, key) => (
+        <button onClick={clickHandler} key={key} className="btn">
+          {a}
+        </button>
+      ))}
+    </div>
+  </div>
+  </>
   );
 }

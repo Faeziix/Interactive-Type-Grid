@@ -1,35 +1,49 @@
 import React, { useState } from "react";
 import TypeGrid from "./Components/TypeGrid.js";
-import { RightSide, LeftSide } from "./Components/sidebar.js";
+import { Side } from "./Components/sidebar.js";
 import Bar from "./Components/bar.js";
 import TypesData, { types } from "./Components/type.js";
 
 let typesName = TypesData.map((i) => i.type);
-let btnTypes = [];
+let filteredBtn = [];
 let btn = [];
 
 function App() {
   let [type, setType] = useState([]);
 
-  function filter(clickedBtn) {
+  function filter(theBtn) {
+    theBtn.classList.toggle('btnClick')
+    let clickedBtn = theBtn.innerText
+
     if (!btn.includes(clickedBtn)) {
       btn.push(clickedBtn);
-      btnTypes = typesName.filter((e) => types[clickedBtn].includes(e));
-      typesName = btnTypes;
+      filteredBtn = typesName.filter((e) => types[clickedBtn].includes(e));
+
+      if(filteredBtn.length === 0) {
+        theBtn.classList.remove('btnClick')
+        btn.pop()
+        filteredBtn = typesName;
+      }else {
+        typesName = filteredBtn;
+      }
     } else {
       btn.splice(btn.indexOf(clickedBtn), 1);
       typesName = TypesData.map((i) => i.type);
+      filteredBtn = [];
       btn.forEach((i) => {
-        btnTypes = typesName.filter((e) => types[i].includes(e));
-        typesName = btnTypes;
+        filteredBtn = typesName.filter((e) => types[i].includes(e));
+        typesName = filteredBtn;
       });
     }
-    setType(btnTypes);
+
+    setType(filteredBtn);
   }
 
   function reset() {
+    let buttons = document.querySelectorAll('.btnClick')
+    buttons.forEach(i => i.classList.remove('btnClick'))
     typesName = TypesData.map((i) => i.type);
-    btnTypes = [];
+    filteredBtn = [];
     btn = [];
     setType([])
   }
@@ -37,9 +51,8 @@ function App() {
   return (
     <div className="TypeGrid-Setup">
       <Bar reset = {reset}/>
-      <RightSide addBtn={filter} />
+      <Side addBtn={filter} />
       <TypeGrid type={type} />
-      <LeftSide addBtn={filter} />
     </div>
   );
 }
