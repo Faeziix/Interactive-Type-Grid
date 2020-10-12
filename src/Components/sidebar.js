@@ -1,22 +1,36 @@
-import React from "react";
-import TypesData, { IS, Q, Temps } from "./type.js";
+import React, { useState } from "react";
+import { Q , types } from "./type.js";
 
-const cf = ["Se-Ni", "Si-Ne", "Ti-Fe", "Te-Fi"];
+const CF = ["Se-Ni", "Si-Ne", "Ti-Fe", "Te-Fi"];
+const IS = ['Direct', 'Informative','Responding','Initiating','Control','Movement']
+const Temps = ['Affiliative','Pragmatic','Concrete','Abstract','Systematic','Interest']
+const Quadra = Object.keys(Q).map(a => a)
 
-export function LeftSide() {
+export function LeftSide(props) {
+  let [btn , setBtn] = useState()
+  const clickHandler = (event) => {
+    setBtn(event.target.innerText)
+
+  }
   return (
     <div className="section1">
       <div className="CF-section">
-        {cf.map((a, key) => (
-          <button className="btn" key={key}>
+        {CF.map((a, key) => (
+          <button 
+          onClick={clickHandler}
+          className="btn" 
+          key={key}>
             {a}
           </button>
         ))}
       </div>
 
       <div className="Quadra-section">
-        {Object.keys(Q).map((a, key) => (
-          <button className="btn" key={key}>
+        {Quadra.map((a, key) => (
+          <button 
+          className="btn" 
+          onClick={clickHandler}
+          key={key}>
             {a}
           </button>
         ))}
@@ -25,25 +39,37 @@ export function LeftSide() {
   );
 }
 
-export function RightSide() {
+export function RightSide(props) {
+  let [btn , setBtn] = useState('')
+  const clickHandler = (event) => {
+    let value = event.target.innerText;
+    setBtn('hello')
+    console.log(btn)
+    props.addBtn(types[btn])
+  }
+
   return (
     <div className="section2">
       <div className="IS-section">
-        <button className="btn">Direct</button>
-        <button className="btn">Informative</button>
-        <button className="btn">Initiating</button>
-        <button className="btn">Responding</button>
-        <button className="btn">Control</button>
-        <button className="btn">Movement</button>
+        {IS.map((a, key) => (
+          <button
+          onClick={clickHandler}
+          key={key} 
+          className="btn">
+            {a}
+            </button>
+        ))}
       </div>
 
       <div className="Temp-section">
-        <button className="btn">Affiliative</button>
-        <button className="btn">Pragmatic</button>
-        <button className="btn">Concrete</button>
-        <button className="btn">Abstract</button>
-        <button className="btn">Systematic</button>
-        <button className="btn">Interest</button>
+        {Temps.map((a, key) => (
+          <button 
+          onClick={clickHandler}
+          key={key}
+          className="btn">
+            {a}
+          </button>
+        ))}
       </div>
     </div>
   );
