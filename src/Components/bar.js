@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Bar() {
+export default function Bar(props) {
   return (
     <div className="name-bar">
-      <button className="reset">Reset</button>
+      <button onClick= {props.reset} className="reset">Reset</button>
     </div>
   );
 }

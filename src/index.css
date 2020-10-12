@@ -27,9 +27,19 @@ button {
   flex: 0 0 47%;
 }
 
-/*=======
-Main Setup 
-======     */
+/* Added when button clicked */
+
+.btnClick {
+  color: #ffffff !important;
+  background: #ff2a2a !important;
+  border-color: #3bc1f6 !important;
+}
+
+/*
+|==========|
+|Main Setup|
+|==========|
+*/
 
 .TypeGrid-Setup {
   display: grid;
