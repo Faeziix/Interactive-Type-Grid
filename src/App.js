@@ -42,7 +42,7 @@ function App() {
   }
 
   function reset() {
-    let buttons = document.querySelectorAll('.btnClick')
+    const buttons = document.querySelectorAll('.btnClick')
     buttons.forEach(i => i.classList.remove('btnClick'))
     typesName = TypesData.map((i) => i.type);
     filteredBtn = [];

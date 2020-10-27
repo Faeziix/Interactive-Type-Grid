@@ -10,11 +10,15 @@ export default function TypeGrid(props) {
             className="TypeName"
             style={{
               color:
-                props.type !== undefined
-                  ? props.type.includes(a.type)
+                   props.type.includes(a.type)
                     ? "red"
                     : "black"
-                  : null,
+                  ,
+                  fontSize:
+                   props.type.includes(a.type)
+                    ?"2.5em" 
+                    : "2.3em"
+
             }}
           >
             {a.type}
@@ -29,6 +33,10 @@ export default function TypeGrid(props) {
           </div>
         </div>
       ))}
+      <footer style={{color: 'red',
+    fontSize: '1rem'}}>
+        created by Faezix
+      </footer>
     </div>
   );
 }
