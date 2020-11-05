@@ -82,7 +82,9 @@ export function Side(props) {
 					color: "#FF0050",
 					fontSize: "1rem",
 					fontFamily: "monospace",
-					fontWeight: "bold",
+          fontWeight: "bold",
+          position: "relative",
+          bottom: "0"
 				}}
 			>
 				created by Faezix

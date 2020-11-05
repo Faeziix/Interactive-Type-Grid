@@ -76,7 +76,7 @@ button {
 .Grid {
   height: 71%;
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-area: mainbar;
   text-align: right;
@@ -161,7 +161,7 @@ button {
 
 .Type-Des {
   align-self: center;
-  font-size: 1.4em;
+  font-size: 1.3em;
   text-align: center;
   font-family: "signika";
   font-weight: inherit;
