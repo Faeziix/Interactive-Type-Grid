@@ -25,12 +25,16 @@ export function Side(props) {
 	const clickHandler = event => {
 		props.addBtn(event.target);
 	};
+	
 	return (
 		<>
 			<div className="section1">
 				<div className="CF-section">
 					{CF.map((a, key) => (
 						<button
+						style = {{
+							backgroundColor: props.hoverType.includes(a)? 'red': 'white'
+						}}
 							onClick={clickHandler}
 							className="btn"
 							key={key}
@@ -42,6 +46,9 @@ export function Side(props) {
 				<div className="Quadra-section">
 					{Quadra.map((a, key) => (
 						<button
+						style = {{
+							backgroundColor: props.hoverType.includes(a)? 'red': 'white'
+						}}
 							className="btn"
 							onClick={clickHandler}
 							key={key}
@@ -56,6 +63,9 @@ export function Side(props) {
 				<div className="IS-section">
 					{IS.map((a, key) => (
 						<button
+						style = {{
+							backgroundColor: props.hoverType.includes(a)? 'red': 'white'
+						}}
 							onClick={clickHandler}
 							key={key}
 							className="btn"
@@ -68,6 +78,9 @@ export function Side(props) {
 				<div className="Temp-section">
 					{Temps.map((a, key) => (
 						<button
+						style = {{
+							backgroundColor: props.hoverType.includes(a)? 'red': 'white'
+						}}
 							onClick={clickHandler}
 							key={key}
 							className="btn"

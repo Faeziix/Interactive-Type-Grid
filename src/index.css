@@ -12,7 +12,7 @@ body {
   font-size: 62.5%;
 }
 
-button {
+.btn {
   text-decoration: none;
   background: #ffffff;
   padding: 8% 0;
@@ -35,6 +35,9 @@ button {
   border-color: #3bc1f6 !important;
 }
 
+.typeClick {
+  color: red !important;
+}
 /*
 |==========|
 |Main Setup|
@@ -238,7 +241,7 @@ button {
     font-size: 1em;
   }
 
-  button {
+  .btn {
     padding: 5% 0;
     font-size: clamp(1.3em, 2vw, 2em);
   }

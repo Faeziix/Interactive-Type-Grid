@@ -2,11 +2,22 @@ import React from "react";
 import TypesData from "./type.js";
 
 export default function TypeGrid(props) {
+	const showTypeDes = id => {
+		let name = [
+			...TypesData[id]["InteractionStyle"],
+			...TypesData[id]["Temperament"],
+			...TypesData[id]["Quadra"],
+			TypesData[id]["QName"],
+		];
+		props.hoverType(name)
+	};
 	return (
 		<div className="Grid">
 			{TypesData.map((a, key) => (
 				<div className="Type" key={key}>
 					<h1
+						onMouseEnter={() => showTypeDes(key)}
+						onMouseLeave={() => props.hoverType([])}
 						className="TypeName"
 						style={{
 							color: props.type.includes(a.type)

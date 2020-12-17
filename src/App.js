@@ -11,6 +11,7 @@ let btn = [];
 
 function App() {
   let [type, setType] = useState([]);
+  let [hoverType, setHoverType] = useState([])
 
   function filter(theBtn) {
     theBtn.classList.toggle('btnClick')
@@ -53,8 +54,8 @@ function App() {
   return (
     <div className="TypeGrid-Setup">
       <Bar reset = {reset}/>
-      <Side addBtn={filter} />
-      <TypeGrid type={type} />
+      <Side addBtn={filter} hoverType ={hoverType}/>
+      <TypeGrid type={type} hoverType = {setHoverType}/>
     </div>
   );
 }
