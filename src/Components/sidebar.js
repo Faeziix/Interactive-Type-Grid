@@ -33,7 +33,7 @@ export function Side(props) {
 					{CF.map((a, key) => (
 						<button
 						style = {{
-							backgroundColor: props.hoverType.includes(a)? 'red': 'white'
+							backgroundColor: props.hoverType.includes(a)? '#00FF00': 'white'
 						}}
 							onClick={clickHandler}
 							className="btn"
@@ -47,7 +47,7 @@ export function Side(props) {
 					{Quadra.map((a, key) => (
 						<button
 						style = {{
-							backgroundColor: props.hoverType.includes(a)? 'red': 'white'
+							backgroundColor: props.hoverType.includes(a)? '#00FF00': 'white'
 						}}
 							className="btn"
 							onClick={clickHandler}
@@ -64,7 +64,7 @@ export function Side(props) {
 					{IS.map((a, key) => (
 						<button
 						style = {{
-							backgroundColor: props.hoverType.includes(a)? 'red': 'white'
+							backgroundColor: props.hoverType.includes(a)? '#00FF00': 'white'
 						}}
 							onClick={clickHandler}
 							key={key}
@@ -79,7 +79,7 @@ export function Side(props) {
 					{Temps.map((a, key) => (
 						<button
 						style = {{
-							backgroundColor: props.hoverType.includes(a)? 'red': 'white'
+							backgroundColor: props.hoverType.includes(a)? '#00FF00': 'white'
 						}}
 							onClick={clickHandler}
 							key={key}

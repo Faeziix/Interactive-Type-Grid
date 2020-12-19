@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import TypesData from "./type.js";
 
 export default function TypeGrid(props) {
 	const showTypeDes = id => {
-		let name = [
-			...TypesData[id]["InteractionStyle"],
-			...TypesData[id]["Temperament"],
-			...TypesData[id]["Quadra"],
-			TypesData[id]["QName"],
-		];
-		props.hoverType(name)
+			let name = [
+				...TypesData[id]["InteractionStyle"],
+				...TypesData[id]["Temperament"],
+				...TypesData[id]["Quadra"],
+				TypesData[id]["QName"],
+			];
+			props.hoverType(name);
 	};
 	return (
 		<div className="Grid">
