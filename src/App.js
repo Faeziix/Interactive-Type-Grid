@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TypeGrid from "./Components/TypeGrid.js";
-import { Side } from "./Components/sidebar.js";
+import { Side } from "./Components/Sidebar/sidebar.js";
 import Bar from "./Components/bar.js";
 import TypesData, { types } from "./Components/type.js";
 import anime from "animejs"
@@ -67,10 +67,10 @@ function animation(target) {
     keyframes: [
       { translateX: 100 },
       { translateX: -100 },
-      { translateX: 100 },
-      { translateX: -100 },
-      { translateX: 100 },
-      { translateX: -100 },
+      { translateX: 80 },
+      { translateX: -60 },
+      { translateX: 40 },
+      { translateX: -20 },
       { translateX: 0 },
     ],
     easing: "linear",
