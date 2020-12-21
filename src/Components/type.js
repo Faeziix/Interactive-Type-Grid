@@ -7,7 +7,7 @@ export const IS = {
 
 export const Temps = {
 	Guardian: ["Affiliative", "Concrete", "Systematic"],
-	Artisan: ["Pragmatic", "Concrete", "Intrest"],
+	Artisan: ["Pragmatic", "Concrete", "Interest"],
 	Intellectual: ["Pragmatic", "Abstract", "Systematic"],
 	Idealist: ["Affiliative", "Abstract", "Interest"],
 };
