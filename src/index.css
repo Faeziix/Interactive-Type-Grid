@@ -1,38 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
-  width: 100vw;
-  font-size: 62.5%;
+	min-height: 100vh;
+	width: 100vw;
+	font-size: 62.5%;
 }
 
 button {
-  text-decoration: none;
-  background: #ffffff;
-  padding: 8% 0;
-  border: none;
-  border-radius: 5px;
-  display: inline-block;
-  transition: all 0.4s ease;
-  font-size: 2.5em;
-  text-align: center;
-  font-weight: 300;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  flex: 0 0 47%;
+	text-decoration: none;
+	background: #ffffff;
+	padding: 8% 0;
+	border: none;
+	border-radius: 5px;
+	display: inline-block;
+	transition: all 0.4s ease;
+	font-size: clamp(2.2em, 2vw, 2.5em);
+	text-align: center;
+	font-weight: 300;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	flex: 0 0 47%;
 }
 
 /* Added when button clicked */
 
 .btnClick {
-  color: #ffffff !important;
-  background: #ff2a2a !important;
-  border-color: #3bc1f6 !important;
+	color: #ffffff !important;
+	background: #ff2a2a !important;
+	border-color: #3bc1f6 !important;
 }
 
 /*
@@ -42,165 +42,165 @@ button {
 */
 
 .TypeGrid-Setup {
-  display: grid;
-  grid-template-areas: "namebar namebar namebar" "sidebarL mainbar sidebarR";
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 10% 1fr;
-  width: 100vw;
-  height: 100vh;
-  align-items: center;
-  overflow: hidden;
+	display: grid;
+	grid-template-areas: "namebar namebar namebar" "sidebarL mainbar sidebarR";
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 10% 1fr;
+	width: 100vw;
+	height: 100vh;
+	align-items: center;
+	overflow: hidden;
 }
 
 .name-bar {
-  grid-area: namebar;
-  border: solid;
-  height: 100%;
-  width: 100%;
-  border-bottom: solid;
-  display: grid;
-  position: relative;
-  /* grid-template-columns: 90% auto; */
-  /*! justify-content: space-between; */
-  /*! padding: 7px 0; */
+	grid-area: namebar;
+	border: solid;
+	height: 100%;
+	width: 100%;
+	border-bottom: solid;
+	display: grid;
+	position: relative;
+	/* grid-template-columns: 90% auto; */
+	/*! justify-content: space-between; */
+	/*! padding: 7px 0; */
 }
 
 .reset {
-  height: 100%;
-  width: 20%;
-  padding: 10px;
-  position: absolute;
-  right: 0;
+	height: 100%;
+	width: 20%;
+	padding: 10px;
+	position: absolute;
+	right: 0;
 }
 
 .Grid {
-  height: 71%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-area: mainbar;
-  text-align: right;
-  align-content: center;
-  align-self: center;
-  width: 100%;
+	height: 71%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	grid-area: mainbar;
+	text-align: right;
+	align-content: center;
+	align-self: center;
+	width: 100%;
 }
 
 .section1,
 .section2 {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 1fr 1fr;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 1fr 1fr;
 }
 
 .section2 {
-  grid-area: sidebarR;
+	grid-area: sidebarR;
 }
 .section1 {
-  grid-area: sidebarL;
+	grid-area: sidebarL;
 }
 
 .Type {
-  /*! position: relative; */
-  display: flex;
-  flex-flow: column nowrap;
-  border: black solid 1px;
-  color: black;
-  height: 100%;
-  justify-content: space-between;
-  font-size: 17px;
+	/*! position: relative; */
+	display: flex;
+	flex-flow: column nowrap;
+	border: black solid 1px;
+	color: black;
+	height: 100%;
+	justify-content: space-between;
+	font-size: 17px;
 }
 
 .TypeName {
-  padding: 8px;
-  font-weight: bold;
-  text-align: center;
-  font-family: sans-serif;
-  transition: ease-in-out all 0.4s;
-  font-size: 2.3em;
+	padding: 8px;
+	font-weight: bold;
+	text-align: center;
+	font-family: sans-serif;
+	transition: ease-in-out all 0.4s;
+	font-size: 2.3em;
 }
 
 .TypeName:hover {
-  color: #00ff00 !important
+	color: #00ff00 !important;
 }
 
 .CF-container {
-  display: flex;
-  flex-direction: row;
-  height: 22%;
+	display: flex;
+	flex-direction: row;
+	height: 22%;
 }
 
 .CF {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  color: white;
-  text-align: center;
-  flex-grow: 1;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	color: white;
+	text-align: center;
+	flex-grow: 1;
 }
 
 .CF h2 {
-  padding: 3px;
-  font-size: 1.2em;
-  font-family: Helvetica, sans-serif;
-  font-weight: lighter;
+	padding: 3px;
+	font-size: 1.2em;
+	font-family: Helvetica, sans-serif;
+	font-weight: lighter;
 }
 
 .CF:first-child {
-  background-color: rgb(0, 80, 2550);
+	background-color: rgb(0, 80, 2550);
 }
 
 .CF:nth-child(2) {
-  background-color: rgb(0, 102, 255);
+	background-color: rgb(0, 102, 255);
 }
 
 .CF:nth-child(3) {
-  background-color: rgb(0, 130, 255);
+	background-color: rgb(0, 130, 255);
 }
 
 .CF:nth-child(4) {
-  background-color: rgb(0, 155, 255);
+	background-color: rgb(0, 155, 255);
 }
 
 .Type-Des {
-  align-self: center;
-  font-size: 1.3em;
-  text-align: center;
-  font-family: "signika";
-  font-weight: inherit;
-  /* margin: 2px; */
+	align-self: center;
+	font-size: clamp(1em, 2vw, 1.3em);
+	text-align: center;
+	font-family: "signika";
+	font-weight: inherit;
+	/* margin: 2px; */
 }
 
 .CF-section,
 .Quadra-section,
 .IS-section,
 .Temp-section {
-  display: flex;
-  padding: 10px;
-  align-items: center;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+	display: flex;
+	padding: 10px;
+	align-items: center;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
 }
 
 .CF-section {
-  border-right: solid 2px;
-  border-bottom: solid 2px;
+	border-right: solid 2px;
+	border-bottom: solid 2px;
 }
 
 .Quadra-section {
-  border-right: solid 2px;
-  border-top: solid 2px;
+	border-right: solid 2px;
+	border-top: solid 2px;
 }
 
 .IS-section {
-  border-left: solid 2px;
-  border-bottom: solid 2px;
+	border-left: solid 2px;
+	border-bottom: solid 2px;
 }
 
 .Temp-section {
-  border-left: solid 2px;
-  border-top: solid 2px;
+	border-left: solid 2px;
+	border-top: solid 2px;
 }
 
 /* .Footer {
@@ -211,48 +211,57 @@ button {
 } */
 
 @media only screen and (min-width: 1100px) {
-  button:hover {
-    color: #ffffff;
-    background: #3bc1f6 !important;
-    border-color: #3bc1f6 !important;
-  }
+	button:hover {
+		color: #ffffff;
+		background: #3bc1f6 !important;
+		border-color: #3bc1f6 !important;
+	}
 }
 
-@media only screen and (max-width: 1100px) {
-  .TypeGrid-Setup {
-    display: grid;
-    grid-template-areas: "namebar namebar " " mainbar mainbar " " sidebarL  sidebarR" "Footer Footer";
-    grid-template-rows: 50px auto auto 20px;
-    grid-template-columns: repeat(2, 1fr);
-    overflow: visible;
-    padding: 1% 3%;
-  }
+@media only screen and (max-width: 1025px) {
+	.TypeGrid-Setup {
+		display: grid;
+		grid-template-areas: "namebar namebar " " mainbar mainbar " " sidebarL  sidebarR" "Footer Footer";
+		grid-template-rows: 50px 1fr 1fr 20px;
+		grid-template-columns: repeat(2, 1fr);
+		overflow: visible;
+		padding: 1% 3%;
+	}
 
-  .Grid {
-    height: 100%;
-  }
+	.Grid {
+		height: 100%;
+	}
 
-  /* .Input-style {
+	/* .Input-style {
     font-size: 20px;
   } */
 
-  .btn-sec h2 {
-    position: static;
-    text-align: center;
-    font-size: 1em;
-  }
+	.btn-sec h2 {
+		position: static;
+		text-align: center;
+		font-size: 1em;
+	}
 
-  button {
-    padding: 5% 0;
-    font-size: clamp(1.3em, 2vw, 2em);
-  }
+	button {
+		padding: 5% 0;
+		font-size: clamp(1.3em, 2vw, 2.2em);
+	}
 
-  .Type {
-    font-size: 10px;
-  }
+	.Type {
+		font-size: 12px;
+	}
 
-  .Footer {
-    grid-area: Footer;
-    font-size: 75%;
-  }
+	.Type-Des {
+		font-size: clamp(0.8rem, 1.5vw, 2.5rem);
+		/* margin: 30px 0; */
+	}
+
+	.Footer {
+		grid-area: Footer;
+		font-size: 75%;
+	}
+
+	.CF h2 {
+		font-size: 1em ;
+	}
 }

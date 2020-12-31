@@ -24,13 +24,13 @@ export default function TypeGrid(props) {
 								? "red"
 								: "black",
 							fontSize: props.type.includes(a.type)
-								? "2.5em"
-								: "2.3em",
+								? "clamp(2.3em,3.25vw,2.5em)"
+								: 'clamp(1.5em,4vw,2.3em)',
 						}}
 					>
 						{a.type}
 					</h1>
-					<h1 className="Type-Des">{a.typeDes}</h1>
+					<h1 className="Type-Des" >{a.typeDes}</h1>
 					<div className="CF-container">
 						{a.CF.map((b, key) => (
 							<div className="CF" key={key}>
