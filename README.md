@@ -20,7 +20,7 @@ On the URL section, there is a pointer icon in a square. by clicking that the ap
 
 ## How It Works
 
-by clicking on each attributes, the related type would turn red. Continue selecting attributes until narrow downed to one type. If a button vibrated, that is the indication of wrong combination. You can toggle off buttons or press reset button on top of the page. Also by hovering over type's names (clicking for mobile users) the attributes of it would show up.
+By clicking on each attributes, the related type would turn red. Continue selecting attributes until narrow downed to one type. If a button vibrated, that is the indication of wrong combination. You can toggle off buttons or press reset button on top of the page. Also by hovering over type's names (clicking for mobile users) the attributes of it would show up.
 
 ***
 
