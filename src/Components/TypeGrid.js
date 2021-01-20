@@ -24,8 +24,8 @@ export default function TypeGrid(props) {
 								? "red"
 								: "black",
 							fontSize: props.type.includes(a.type)
-								? "clamp(2.3em,3.25vw,2.5em)"
-								: 'clamp(1.5em,4vw,2.3em)',
+								? "clamp(1.7em,4.25vw,2.5em)"
+								: "clamp(1.5em,4vw,2.3em)"
 						}}
 					>
 						{a.type}
